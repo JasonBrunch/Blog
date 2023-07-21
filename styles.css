@@ -8,14 +8,27 @@
     /* Styles for the ul */
     list-style-type: none;
     padding: 0;
-    background-color: crimson;
+    /*background-color: crimson;*/
     display: flex;
-    margin: 0 10px
+    justify-content: flex-end;
+    margin: 0 10px;
+    
+    
+    
 }
 
 .navList li {
     /* Styles for the li elements within .navList */
-    background-color: aqua;
+    /*background-color: aqua;*/
+    margin: 5px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+
+}
+.navList li a {
+    color: white;
+    text-decoration: none; /* Removes the underline */
 }
 @media (max-width: 600px){
     .navList{
