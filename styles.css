@@ -1,29 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 #mainNav{
     /* Styles for the nav element */
     background-color: rgb(48, 48, 48);
     
 }
-
+/* Styles for mobile screens */
 .navList{
-    /* Styles for the ul */
     list-style-type: none;
     padding: 0;
-    /*background-color: crimson;*/
     display: flex;
-    justify-content: flex-end;
-    margin: 0 10px;
-    
-    
-    
+    flex-direction: row;
+    justify-content: space-around; /* Added this to distribute space around the items */
+    align-items: center;
+    margin: 0;
+    width: 100%; /* Make the navigation list take up the full width of the screen */ 
 }
 
 .navList li {
     /* Styles for the li elements within .navList */
-    /*background-color: aqua;*/
-    margin: 5px 20px;
+
+    margin: 5px 0; /* Adjust margin to fit better on mobile screens */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    
 
 }
 .navList li a {
@@ -34,16 +35,22 @@
     background-color: blueviolet;
 
     width: 100%; /* Full width on small screens */
-    max-width: 960px; /* This is the maximum width the container will be. You can adjust it to your needs. */
-    margin: 0 auto; /* This centers the .hero container */
+    margin: 0 auto; /* Center the content */
     padding: 1em; /* Some space around the content */
 }
 .hero h1 {
     font-size: 2em; /* You can adjust the size as needed */
     line-height: 1.4; /* Adjusts the space between lines of text */
+    text-align: center; /* Center the title text */
 }
 #blog{
 
+}
+.post-preview{
+    display: flex; 
+    flex-direction: row; 
+    align-items: start; 
+    gap: 10px; /* creates some space between the thumbnail and blog details */
 }
 .Thumbnail{
     width: 150px; /* Set the width of the thumbnail */
@@ -57,34 +64,42 @@
     object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
 }
 
+.blog-details {
+    flex-grow: 1; /* Added this - allow the blog details to take up the remaining space */
+}
 
 
 
 
 
-/* MEDIA QUERIES*/
-@media (max-width: 600px){
+
+/* MEDIA QUERIES */
+/* Styles for tablets and larger screens */
+@media (min-width: 601px){
     .navList{
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0 10px;
+    }
+
+    .navList li {
+        margin: 5px 20px; /* Add more margin for larger screens */
+    }
+
+    .Thumbnail, .Thumbnail img {
+        width: 150px;
+        height: 150px;
     }
 }
-@media (min-width: 768px){
+
+/* Styles for desktop and larger screens */
+@media (min-width: 1025px){
     .hero{
-        width: 75%; /* The .hero section will take up 75% of the screen width */
+        width: 50%;
+        padding: 2em; /* Add more padding for larger screens */
     }
 
     .hero h1 {
-        font-size: 2.5em; /* Increase the font size on larger screens */
-    }
-}
-/* For even larger screens */
-@media (min-width: 1200px){
-    .hero{
-        width: 50%; /* The .hero section will take up 50% of the screen width */
-    }
-
-    .hero h1 {
-        font-size: 3em; /* Increase the font size on even larger screens */
+        font-size: 2.5em;
     }
 }
