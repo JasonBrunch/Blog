@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Alexandria';
+    src: url('AlexandriaFLF.woff2') format('woff2'),
+         url('AlexandriaFLF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +17,7 @@ body {
 }
 /* Styles for mobile screens */
 .navList{
+    box-sizing: border-box;
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -23,8 +32,8 @@ body {
     /* Styles for the li elements within .navList */
 
     margin: 5px 0; /* Adjust margin to fit better on mobile screens */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-family: 'Alexandria', serif;
+    font-size: 18px;
 
 }
 .navList li a {
@@ -32,19 +41,39 @@ body {
     text-decoration: none; /* Removes the underline */
 }
 .hero{
-    background-color: blueviolet;
+    background-color: rgb(48, 48, 48);
 
     width: 100%; /* Full width on small screens */
     margin: 0 auto; /* Center the content */
-    padding: 1em; /* Some space around the content */
-}
-.hero h1 {
-    font-size: 2em; /* You can adjust the size as needed */
-    line-height: 1.4; /* Adjusts the space between lines of text */
-    text-align: center; /* Center the title text */
-}
-#blog{
+    padding: 1.5rem; /* Some space around the content now using rem */
 
+    box-sizing: border-box;
+  
+}
+h1 {
+    color: white;
+    font-family: 'Alexandria', serif;
+    font-size: 2em; /* You can adjust the size as needed */
+    margin-bottom: 1rem; /* Adjust this value as needed */
+    text-align: left; 
+    font-weight: bold;
+}
+h2{
+    color: white;
+    font-family: 'Alexandria', serif;
+    font-size: 1.75em; /* You can adjust the size as needed */
+    font-weight: normal;
+    margin-top: 1rem; /* Adjust this value as needed */
+    text-align: left; 
+}
+#blog {
+    width: 100%; /* Full width on small screens */
+    background-color: rgb(52, 76, 112);
+}
+
+.blog-content {
+    padding: 1.5rem; /* Same padding as the hero content */
+    box-sizing: border-box;
 }
 .post-preview{
     display: flex; 
@@ -52,17 +81,18 @@ body {
     align-items: start; 
     gap: 10px; /* creates some space between the thumbnail and blog details */
 }
+/*
 .Thumbnail{
-    width: 150px; /* Set the width of the thumbnail */
-    height: 150px; /* Set the height of the thumbnail */
-    overflow: hidden; /* Ensure the image does not overflow the container */
+    width: 150px; 
+    height: 150px; 
+    overflow: hidden; 
 }
 
 .Thumbnail img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
-}
+    object-fit: cover;
+*/
 
 .blog-details {
     flex-grow: 1; /* Added this - allow the blog details to take up the remaining space */
