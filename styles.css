@@ -5,6 +5,16 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Draftside';
+    src: url('DraftsideRegular.woff') format('woff'),
+    url('DraftsideRegular.woff2') format('woff2');
+
+
+}
+:root{
+        --universal-padding: 1.5rem;
+}
 
 body {
     margin: 0;
@@ -40,21 +50,21 @@ body {
     color: white;
     text-decoration: none; /* Removes the underline */
 }
-.hero{
+.hero {
     background-color: rgb(48, 48, 48);
-
-    width: 100%; /* Full width on small screens */
-    margin: 0 auto; /* Center the content */
-    padding: 1.5rem; /* Some space around the content now using rem */
-
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem var(--universal-padding);
     box-sizing: border-box;
-  
+}
+h1, h2, h3 {
+    margin: 0;
 }
 h1 {
     color: white;
     font-family: 'Alexandria', serif;
     font-size: 2em; /* You can adjust the size as needed */
-    margin-bottom: 1rem; /* Adjust this value as needed */
+
     text-align: left; 
     font-weight: bold;
 }
@@ -63,39 +73,77 @@ h2{
     font-family: 'Alexandria', serif;
     font-size: 1.75em; /* You can adjust the size as needed */
     font-weight: normal;
-    margin-top: 1rem; /* Adjust this value as needed */
+
     text-align: left; 
+}
+/*This is format for dates*/
+h3{
+    font-family: 'Draftside', serif;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: normal;
+  
+    text-align: left;
+}
+.hero h1{
+    margin-bottom: 0.8rem;
 }
 #blog {
     width: 100%; /* Full width on small screens */
     background-color: rgb(52, 76, 112);
 }
 
-.blog-content {
-    padding: 1.5rem; /* Same padding as the hero content */
+
+.blog-header{
+
+    padding: 2rem var(--universal-padding) 0.75rem;
     box-sizing: border-box;
+}
+.blog-header h1{
+    font-size: 1.75rem;
 }
 .post-preview{
     display: flex; 
     flex-direction: row; 
     align-items: start; 
     gap: 10px; /* creates some space between the thumbnail and blog details */
+
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 1rem var(--universal-padding);
+    margin: 10px 0;
+    box-sizing: border-box;
+
+
 }
-/*
-.Thumbnail{
-    width: 150px; 
-    height: 150px; 
-    overflow: hidden; 
+.post-preview a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
-.Thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-*/
+.post-preview h1{
+font-size: 1.25em;
+}
+.post-preview h2{
+font-size: 1.25rem;
+}
+.blog-details h1,
+.blog-details h2{
+    margin-bottom: 0.5rem; /* Adjust this value as needed */
+    margin-top: 0.5rem; /* Adjust this value as needed */
+}
+.blog-details h3{
+    margin-bottom: 0.75rem; /* Adjust this value as needed */
+    margin-top: 0.25rem; /* Adjust this value as needed */
+}
 
 .blog-details {
     flex-grow: 1; /* Added this - allow the blog details to take up the remaining space */
+}
+footer{
+    background-color: aquamarine;
+    padding: 2rem var(--universal-padding);
 }
 
 
