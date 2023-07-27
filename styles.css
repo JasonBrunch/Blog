@@ -14,15 +14,25 @@
 }
 :root{
         --universal-padding: 1.5rem;
+
+        --color-background: #121212;
+        --color-background2: #5a3618;  /* Almost black for main background */
+        --color-text: #e0e0e0;        /* Off-white for main text color */
+        --color-secondary: #9e9e9e;   /* Grey for secondary text, borders, etc. */
+        --color-primary: #bb86fc;     /* A muted purple for primary interactive elements or highlights */
+        --color-accent: #03dac6;      /* A muted cyan for accent elements or CTAs */
+
 }
 
 body {
     margin: 0;
     padding: 0;
+
+    background-color: var(--color-background);
 }
 #mainNav{
-    /* Styles for the nav element */
-    background-color: rgb(48, 48, 48);
+    background-color: var(--color-background2);
+
     
 }
 /* Styles for mobile screens */
@@ -47,11 +57,11 @@ body {
 
 }
 .navList li a {
-    color: white;
+    color: var(--color-text);
     text-decoration: none; /* Removes the underline */
 }
 .hero {
-    background-color: rgb(48, 48, 48);
+
     width: 100%;
     margin: 0 auto;
     padding: 3rem var(--universal-padding);
@@ -61,17 +71,17 @@ h1, h2, h3 {
     margin: 0;
 }
 h1 {
-    color: white;
+    color: var(--color-text);
     font-family: 'Alexandria', serif;
-    font-size: 2em; /* You can adjust the size as needed */
+    font-size: 2em; 
 
     text-align: left; 
     font-weight: bold;
 }
 h2{
-    color: white;
+    color: var(--color-secondary);
     font-family: 'Alexandria', serif;
-    font-size: 1.75em; /* You can adjust the size as needed */
+    font-size: 1 rem;
     font-weight: normal;
 
     text-align: left; 
@@ -79,8 +89,8 @@ h2{
 /*This is format for dates*/
 h3{
     font-family: 'Draftside', serif;
-    color: white;
-    font-size: 1.25rem;
+    color: var(--color-secondary);
+    font-size: 1rem;
     font-weight: normal;
   
     text-align: left;
@@ -90,7 +100,7 @@ h3{
 }
 #blog {
     width: 100%; /* Full width on small screens */
-    background-color: rgb(52, 76, 112);
+ 
 }
 
 
@@ -108,7 +118,7 @@ h3{
     align-items: start; 
     gap: 10px; /* creates some space between the thumbnail and blog details */
 
-    border: 2px solid #000;
+    border: 1px solid var(--color-secondary);
     border-radius: 10px;
     padding: 1rem var(--universal-padding);
     margin: 10px 0;
@@ -142,8 +152,8 @@ font-size: 1.25rem;
     flex-grow: 1; /* Added this - allow the blog details to take up the remaining space */
 }
 footer{
-    background-color: aquamarine;
-    padding: 2rem var(--universal-padding);
+  
+    padding: 2rem var(--universal-padding) 0rem;
 }
 
 
